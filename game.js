@@ -5,17 +5,17 @@ const yourScoreSpan = document.querySelector('[data-computer-score]')
 const SELECTIONS = [
     {
     name = 'rock',
-    emoji = 🗿,
+    emoji = 🗿 rock,
     beats = 'scissors',
-};
+},
 {
     name = 'scissors',
-    emoji = ✂️,
+    emoji = ✂️ scissors,
     beats = 'paper'
-};
+},
 {
     name = 'paper',
-    emoji = 📃,
+    emoji = 📃 paper,
     beats = 'rock'
 }
 ]
@@ -64,9 +64,6 @@ function isWinner(selection, opponentSelection) {
     }
 
     
-
-
-
 }
 
 function incrementScore(scoreSpan){
