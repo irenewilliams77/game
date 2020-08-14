@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stylesheet.css">
+    <title>Rock game</title>
+</head>
+<body>
+    <div class="selections">
+    <button class="selection" data-selection="rock">🗿</button>
+    <button class="selection" data-selection="paper">📃</button>
+    <button class="selection" data-selection="scissors">✂️</button>
+    </div>
+    <br>
+    <br>
+    <div class="results">
+        <div>
+            YOU
+            <span class="results-score" data-your-score>0</span>
+        </div>
+        <div data-final-column>
+            COMPUTER
+            <span class="results-score" data-your-score>0</span>
+        </div>
+        <div class="result-selection"></div>
+        <div class="result-selection.winner"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
