@@ -4,24 +4,24 @@ const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-computer-score]')
 const SELECTIONS = [
     {
-    name = 'rock',
-    emoji = 🗿 rock,
-    beats = 'scissors',
+    name : 'rock',
+    emoji :  'rock',
+    beats : 'scissors',
 },
 {
-    name = 'scissors',
-    emoji = ✂️ scissors,
-    beats = 'paper'
+    name : 'scissors',
+    emoji :  'scissors',
+    beats : 'paper'
 },
 {
-    name = 'paper',
-    emoji = 📃 paper,
-    beats = 'rock'
+    name : 'paper',
+    emoji : 'paper',
+    beats : 'rock'
 }
 ]
 selectionButtons.forEach(selectionButtons => {
-    selectionButton.addEventListener('click', e => {
-        const selectionName = selectionButton.dataset.selection
+    selectionButtons.addEventListener('click', e => {
+        const selectionName = selectionButtons.dataset.selection
         const selection = SELECTIONS.find(selection => selection.name === selectionName)
         makeSelection(selectionName)
     })
@@ -30,7 +30,7 @@ function makeSelection(selection){
     const computerSelection = randomSelection()
     const yourWinner = isWinner(selection, computerSelection)
     const computerWinner = isWinner(computerSelection, selection)
-
+// i think this needs to be strings, not vars
 addSelectionResults(computerSelection, computerWins)
 addSelectionResults(computerSelection, youWins) 
 if (yourWinner) incrementScore(yourScoreSpan)
@@ -51,7 +51,7 @@ finalColumn.after(div)
 }
 
 function isWinner(selection, opponentSelection) {
-    return selection.beats === opponent.name
+    return selection.beats === opponentSelection.name
 }
 
     function randomSelection() {
@@ -63,13 +63,9 @@ function isWinner(selection, opponentSelection) {
         return selection.beats === opponent.name
     }
 
-    
-}
-
 function incrementScore(scoreSpan){
     scoreSpan.innerText = parseInt(scoreSpan.innerText) +1
 }
-
 
 function addResults(selection, winners){
 const div = document.createElement('div')
