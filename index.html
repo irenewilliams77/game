@@ -7,24 +7,35 @@
     <title>Rock game</title>
 </head>
 <body>
+    <header class="header">
+    <h1>ROCK PAPER SCISSORS GAME</h1>
+    </header>
+    <br>
+    <br>
+<div class="container">
+    <div class="score-board">
+        <span class="user">YOU</span>
+        <span class="score">0-0</span>
+        <span class="com">COM</span>
+    </div>
+    
     <div class="selections">
-    <button class="selection" data-selection = "rock">🗿</button>
-    <button class="selection" data-selection = "paper">📃</button>
-    <button class="selection" data-selection = "scissors">✂️</button>
+        <button class="selection" onclick="game(this.value)" value= "rock"><i class="🗿">🗿</i></button>
+        <button class="selection"  onclick="game(this.value)" value= "paper"><i class="📃">📃</i></button>
+        <button class="selection" onclick="game(this.value)" value= "scissors"><i class="✂️">✂️</i></button>
+    </div n >
+    <div class="challenge">
+        <div id="you">
+        <div id="yourObjective"></div>
+        <div class="me">You Win</div>
     </div>
-    <br>
-    <br>
-    <div class="results">
-        <div>
-            YOU
-            <span class="results-score" data-your-score>0</span>
-        </div>
-        <div data-final-column>
-            COMPUTER
-            <span class="results-score" data-computer-score>0</span>
-        </div>
-       
+        <div id="results"><p>You</p></div>
+        <div id="com">
+        <div id="comObjective"></div>
+        <div class="me">Computer</div>
     </div>
-    <script src="game.js"></script>
+    </div>
+</div>
+    <script src="main.js"></script>
 </body>
 </html>

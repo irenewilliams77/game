@@ -63,9 +63,9 @@ font-family: sans-serif;
     margin: 0 20px;
     padding: 10px;
 }
-.selection:hover{
+.btn:hover{
     cursor: pointer;
-    background: lawngreen;
+   
 }
 
 #message{
