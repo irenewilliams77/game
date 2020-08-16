@@ -6,26 +6,36 @@ const yourScoreSpan = document.querySelector('[data-your-score]');
 const SELECTIONS = [
     {
     name : 'rock',
+
     emoji : '🗿',
     beats : 'scissors'
 },
 {
     name : 'scissors',
     emoji : '✂️',
-    beats : 'paper'
+  beats : 'paper
 },
-{
-    name : 'paper',
+   name : 'paper',
+
     emoji : '📃',
     beats : 'rock'
 }
 ]
+
+   
 selectionButtons.forEach(selectionButton => {
     selectionButton.addEventListener('click', e => {
         const selectionName = selectionButton.dataset.selection
+
+}
+
+selectionButtons.forEach(selectionButtons => {
+    selectionButtons.addEventListener('click', e => {
+        const selectionName = selectionButtons.dataset.selection
         const selection = SELECTIONS.find(selection => selection.name === selectionName)
         makeSelection(selection)
     })
+
 });
 function makeSelection(selection) {
     const computerSelection = randomSelection();
@@ -33,6 +43,17 @@ function makeSelection(selection) {
     const computerWinner = isWinner(computerSelection, selection);
     console.log(computerSelection)
 }
+function makeSelection(selection){
+    const computerSelection = randomSelection()
+    const yourWinner = isWinner(selection, computerSelection)
+    const computerWinner = isWinner(computerSelection, selection)
+
+addSelectionResults(computerSelection, computerWins)
+addSelectionResults(computerSelection, youWins) 
+if (yourWinner) incrementScore(yourScoreSpan)
+if (computerWinner) incrementScore(computerScoreSpan)
+
+
 addSelectionResults(computerSelection, computerWinner);
 addSelectionResults(selection, yourWinner) ;
 
@@ -53,7 +74,7 @@ function addSelectionResults(selection, winner) {
 
 function isWinner(selection, opponentSelection) {
     return selection.beats === opponentSelection.name
-};
+}
 
     function randomSelection() {
         const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
@@ -64,12 +85,18 @@ function isWinner(selection, opponentSelection) {
         return selection.beats === opponentSelection.name
     };
 
+
     
 
 
 function incrementScore(scoreSpan){
     scoreSpan.innerText = parseInt(scoreSpan.innerText) +1
 };
+=======
+function incrementScore(scoreSpan){
+    scoreSpan.innerText = parseInt(scoreSpan.innerText) +1
+}
+
 
 function addResults(selection, winners){
 const div = document.createElement('div')
