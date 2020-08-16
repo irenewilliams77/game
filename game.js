@@ -1,5 +1,5 @@
 
-const selectionButtons = document.querySelectorAll('[data-selection]');
+/*const selectionButtons = document.querySelectorAll('[data-selection]');
 const finalColumn = document.querySelector('[data-final-column]');
 const computerScoreSpan = document.querySelector('[data-computer-score]');
 const yourScoreSpan = document.querySelector('[data-your-score]');
@@ -76,4 +76,4 @@ const div = document.createElement('div')
 div.innerText = selection.emoji 
 if (winner) div.classList.add('winner')
 finalColumn.after(div)
-};
+};/*
