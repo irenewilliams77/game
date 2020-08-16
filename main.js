@@ -4,12 +4,12 @@ const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const score_div = document.querySelector(".score");
 const results_p = document.querySelector(".results > p");
-const rock_div = document.querySelector("r");
-const paper_div = document.querySelector("p");
-const scissors_div = document.querySelector("s");
+const paper_div = document.getElementById("p");
+const rock_div = document.getElementById("r");
+const scissors_div = document.getElementById("s");
 
 function getComputerChoice(){
-    const choices = ["r","p","s"];
+    const choices = ['r','p','s'];
     const randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
 }
@@ -77,8 +77,8 @@ function game(userChoice) {
 }
 
 function main() {
-    rock_div.addEventListener('click', ()=> game("r") );
-    paper_div.addEventListener('click', () => game("p") );
+    rock_div.addEventListener('click', () => game("r") );
+   paper_div.addEventListener('click', () => game("p") );
     scissors_div.addEventListener('click', () => game("s"));
 }
 main();
