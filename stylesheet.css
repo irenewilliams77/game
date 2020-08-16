@@ -25,7 +25,7 @@
     align-items: center;
     font-size: 16px;
 }
-.result-score {
+.result-score{
     margin-left: .5rem;
     font-size: 16px;
 }
@@ -35,7 +35,4 @@ result-selection {
 result-selection.winner {
     opacity: 1;
     font-size: 2 rem;
-}
-.bigger {
-    font-size: 2rem;
 }
