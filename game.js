@@ -1,28 +1,29 @@
+let playerselection;
 const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-computer-score]')
 const SELECTIONS = [
     {
-    name = 'rock',
-    emoji = 🗿 rock,
-    beats = 'scissors',
+    name : 'rock',
+    emoji : '🗿 rock',
+    beats : 'scissors',
 },
 {
-    name = 'scissors',
-    emoji = ✂️ scissors,
-    beats = 'paper'
+    name : 'scissors',
+    emoji : '✂️ scissors',
+    beats : 'paper'
 },
 {
-    name = 'paper',
-    emoji = 📃 paper,
-    beats = 'rock'
+    name : 'paper',
+    emoji : '📃 paper',
+    beats : 'rock'
 }
 ]
 selectionButtons.forEach(selectionButtons => {
     selectionButton.addEventListener('click', e => {
         const selectionName = selectionButton.dataset.selection
-        const selection = SELECTIONS.find(selection => selection.name === selectionName)
+        const selection = SELECTIONS.find(selection => selection.name == selectionName)
         makeSelection(selectionName)
     })
 })
@@ -45,7 +46,7 @@ function addSelectionResults(selection,winner) {
     const div = document.createElement('div')
     div.innerText = selection.emoji
     div.classList.add('results-selection')
-    if (winner)  div.classList.add('results-selection')
+    if (winner)  div.classList.add('results-selection.winner')
     
 finalColumn.after(div)
 }
